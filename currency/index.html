@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер валют</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💱 Конвертер валют</h1>
+        <form id="currencyForm">
+            <input type="number" id="amount" placeholder="Сумма" min="0" step="0.01" required>
+            <select id="fromCurrency">
+                <option value="USD">USD 🇺🇸</option>
+                <option value="EUR">EUR 🇪🇺</option>
+                <option value="RUB">RUB 🇷🇺</option>
+                <option value="KZT">KZT 🇰🇿</option>
+            </select>
+            <span>➡️</span>
+            <select id="toCurrency">
+                <option value="RUB">RUB 🇷🇺</option>
+                <option value="USD">USD 🇺🇸</option>
+                <option value="EUR">EUR 🇪🇺</option>
+                <option value="KZT">KZT 🇰🇿</option>
+            </select>
+            <button type="submit">Конвертировать</button>
+        </form>
+
+        <p id="errorMsg" class="error hidden"></p>
+        <div id="result" class="hidden">
+            <h2>Результат</h2>
+            <p id="resultText"></p>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
